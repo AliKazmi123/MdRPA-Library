@@ -17,11 +17,10 @@ ${report}
 
 Create Error
     [Arguments]    ${model_name}    ${page_name}    ${element_name}    ${locator}
-    &{element}    Create Dictionary     model_name=${model_name}      page_name=${page_name}    element_name=${element_name}    locator=${locator}
-    Append To List    ${error_list}    ${element}
-
-Send Report to UI Modeler
-    Set Suite Variable   ${report}    ${error_list}
-    ${resp}=    POST    ${HTTP_LOCAL_SERVER}    json=${report}
+    &{element}    Create Dictionary     model_name=${model_name}      page_name=${page_name}    element_name=${element_name}    locator=${locator} 
+    ${resp}=    POST    ${HTTP_LOCAL_SERVER}    json=${element}
     Status Should Be    OK    ${resp}
+
+
+    
 
