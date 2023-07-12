@@ -1,4 +1,3 @@
-ModelDrivenRpa Library
 
 
 
@@ -12,4 +11,5 @@ Installation
 You can install the ModelDrivenRpa library using pip:
 
 
-pip install ModelDrivenRpa
+pip install mdrpaLibrary
+
